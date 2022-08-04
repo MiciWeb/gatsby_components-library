@@ -1,0 +1,55 @@
+// @import url("");
+
+:root {
+  --primary: ;
+  --secondary: ;
+  --tertiary: ;
+  --alert: ;
+  --info: ;
+  --contrasted: #ffffff;
+  --dark: black;
+  --font: "";
+  --large-desktop: 1920px;
+  --desktop: 1440px;
+  --vertical-padding: 32px;
+  --horizontal-padding: 260px;
+  --tablet: 824px;
+  --tablet-padding: 120px;
+  --mobile: 320px;
+  --mobile-padding: 48px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: unset;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-style: normal;
+}
+
+// handle container margin and max-width
+.Navbar__container,
+.Footer__container,
+.HeroHeader__container {
+  margin: auto;
+  
+  // large desktop
+  @media only screen and (min-width: 1920px) {
+    max-width: calc(1920px - var(--horizontal-padding));
+  }
+
+  // desktop
+  max-width: calc(100vw - var(--horizontal-padding));
+
+  // tablet
+  @media only screen and (max-width: 824px) {
+    max-width: calc(100% - var(--tablet-padding));
+  }
+
+  // mobile
+  @media only screen and (max-width: 420px) {
+    max-width: calc(100% - var(--mobile-padding));
+  }
+}
